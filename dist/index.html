@@ -68,6 +68,16 @@
     .location{background:var(--lime)}
     @media(max-width:840px){.hero-media{background-image:linear-gradient(0deg,rgba(21,63,53,.87) 0%,rgba(21,63,53,.22) 66%),url('assets/joao-maria.png')}}
   </style>
+  <style>
+    :root{--sun:#f6c515;--orange:#ef5b2e;--blue:#7cb8f1;--lime:#77b943;--violet:#7a58c7}
+    .intro{background:var(--sun)}.intro:before{background:var(--orange);opacity:.22}
+    .feature-band{background:var(--cream)}
+    .gallery-section{background:var(--blue)}
+    .location{background:var(--orange);color:#fff}.location .eyebrow{color:var(--sun)}.location .address{color:rgba(255,255,255,.86)}.location .button-primary{background:var(--ink);color:#fff}.location .map-card{background-color:#ffd55b}
+    .section-head p,.intro-copy>p,.feature p,.quote-layout>.reveal>p,.instagram-section p{display:none}
+    .hero-sub{max-width:440px}
+    .gallery-item[data-new-shot]{border:5px solid var(--sun)}
+  </style>
 </head>
 <body>
   <header class="site-header" id="header">
@@ -102,6 +112,24 @@
     const closeLightbox=()=>lightbox.classList.remove('open');lightbox.addEventListener('click',e=>{if(e.target===lightbox||e.target.tagName==='BUTTON')closeLightbox()});addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});
     document.getElementById('quote-form').addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target),date=d.get('date')?new Date(d.get('date')+'T12:00:00').toLocaleDateString('pt-BR'):'';const msg=`Olá Be Happy! Quero consultar uma data para uma festa.%0A%0ANome: ${encodeURIComponent(d.get('name'))}%0ACriança: ${encodeURIComponent(d.get('child'))}${date?'%0AData desejada: '+encodeURIComponent(date):''}${d.get('guests')?'%0AConvidados: '+encodeURIComponent(d.get('guests')):''}${d.get('idea')?'%0AIdeia: '+encodeURIComponent(d.get('idea')):''}`;window.open('https://wa.me/5535998877633?text='+msg,'_blank')});
     const menu=document.querySelector('.menu-toggle'),links=document.querySelector('.nav-links');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));links.style.display=open?'none':'flex';links.style.position='absolute';links.style.top='64px';links.style.left='17px';links.style.right='17px';links.style.padding='18px';links.style.flexDirection='column';links.style.alignItems='flex-start';links.style.background='var(--cream)';links.style.borderRadius='6px';links.style.boxShadow='var(--shadow)';links.querySelectorAll('a').forEach(a=>a.style.color='var(--ink)')});
+  </script>
+  <script>
+    (()=>{
+      const title=document.getElementById('hero-title');
+      if(title) title.innerHTML='Uma casa.<br><span class="serif">Muitas atmosferas.</span>';
+      const subtitle=document.querySelector('.hero-sub');
+      if(subtitle) subtitle.textContent='Festas cheias de cor, brincadeira e cenários que ficam na memória.';
+      const introImage=document.querySelector('.editorial-image img');
+      if(introImage){introImage.src='assets/fachada.png';introImage.alt='Fachada da Be Happy Casa de Festas com o letreiro colorido';}
+      const igImages=document.querySelectorAll('.ig-grid img');
+      [['assets/fachada.png','Fachada da Be Happy'],['assets/interior.png','Salão da Be Happy com decoração de girafa'],['assets/brinquedo.png','Brinquedo colorido da Be Happy']].forEach((item,i)=>{if(igImages[i]){igImages[i].src=item[0];igImages[i].alt=item[1];}});
+      const gallery=document.querySelector('.gallery-grid');
+      if(gallery){
+        gallery.insertAdjacentHTML('beforeend','<figure class="gallery-item tall reveal" data-category="space" data-new-shot data-caption="A casa por fora"><img src="assets/fachada.png" alt="Fachada colorida da Be Happy Casa de Festas" loading="lazy"><figcaption>Fachada · Be Happy</figcaption></figure><figure class="gallery-item reveal" data-category="space" data-new-shot data-caption="O salão por dentro"><img src="assets/interior.png" alt="Salão interno com decoração infantil e iluminação colorida" loading="lazy"><figcaption>Salão · por dentro</figcaption></figure><figure class="gallery-item wide reveal" data-category="space" data-new-shot data-caption="Brinquedo que chama atenção"><img src="assets/brinquedo.png" alt="Brinquedo vertical colorido dentro da Be Happy" loading="lazy"><figcaption>Brinquedo · energia Be Happy</figcaption></figure>');
+        const lb=document.querySelector('.lightbox'), lbImg=lb&&lb.querySelector('img'), lbCaption=lb&&lb.querySelector('.lightbox-caption');
+        gallery.querySelectorAll('[data-new-shot]').forEach(item=>item.addEventListener('click',()=>{const img=item.querySelector('img');if(lb&&lbImg){lbImg.src=img.src;lbImg.alt=img.alt;lbCaption.textContent=item.dataset.caption||'';lb.classList.add('open')}}));
+      }
+    })();
   </script>
 </body>
 </html>
