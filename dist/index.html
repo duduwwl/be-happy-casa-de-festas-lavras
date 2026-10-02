@@ -85,7 +85,14 @@
     .feature-no{display:none}.feature{grid-template-columns:1fr auto}.feature .mark{font-size:0;background-repeat:no-repeat;background-position:center;background-size:23px}.feature:nth-child(1) .mark{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ef5b2e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v3M5.6 5.6l2.1 2.1M3 12h3M5.6 18.4l2.1-2.1M18.4 5.6l-2.1 2.1M21 12h-3M18.4 18.4l-2.1-2.1'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3C/svg%3E")}.feature:nth-child(2) .mark{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ef5b2e' stroke-width='1.8' stroke-linejoin='round'%3E%3Cpath d='m4 8 8-4 8 4-8 4-8-4Z'/%3E%3Cpath d='m4 12 8 4 8-4M4 16l8 4 8-4'/%3E%3C/svg%3E")}.feature:nth-child(3) .mark{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ef5b2e' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 7h16v12H4zM8 7l1.5-3h5L16 7'/%3E%3Ccircle cx='12' cy='13' r='3'/%3E%3C/svg%3E")}
     @media(max-width:840px){.hero-media{background-image:linear-gradient(0deg,rgba(21,63,53,.88) 0%,rgba(21,63,53,.28) 66%),url('assets/fachada.png')}.themes-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,300px)}.theme-card:first-child,.theme-card:nth-child(2),.theme-card:nth-child(3){grid-column:auto;grid-row:auto;border-radius:24px 24px 70px 24px}.site-header .brand img{width:50px;height:50px}}
   </style>
-</head>
+  <style>
+    /* Final visual cleanup: a quieter hero with the photography in charge. */
+    .hero-media{background-image:linear-gradient(90deg,rgba(21,63,53,.86) 0%,rgba(21,63,53,.36) 48%,rgba(21,63,53,.08) 100%),linear-gradient(0deg,rgba(21,63,53,.62),transparent 58%),url('assets/fachada-enhanced.png');background-position:center 48%;filter:saturate(1.04) contrast(1.02)}
+    .hero-inner{padding-bottom:58px}.hero-content{transform:translateY(54px)}.hero h1{font-size:clamp(2.95rem,5.6vw,5.45rem);max-width:560px;line-height:.94;margin:16px 0 18px}.hero-sub{font-size:1rem;max-width:370px;margin-bottom:24px}.hero-index,.scroll-hint{display:none}
+    .marquee{display:none}.image-tag{display:none}.signature span{display:none}.signature{margin-top:32px}.signature img{width:82px;height:82px;filter:drop-shadow(0 8px 14px rgba(21,63,53,.2))}
+    @media(max-width:840px){.hero-media{background-image:linear-gradient(0deg,rgba(21,63,53,.84) 0%,rgba(21,63,53,.2) 65%),url('assets/fachada-enhanced.png');background-position:center 48%}.hero-inner{padding-bottom:38px}.hero-content{transform:translateY(28px)}.hero h1{font-size:clamp(2.7rem,12vw,4.4rem);max-width:430px}.hero-sub{font-size:.96rem;max-width:330px}.signature img{width:72px;height:72px}}
+  </style>
+  </head>
 <body>
   <header class="site-header" id="header">
     <div class="wrap nav">
