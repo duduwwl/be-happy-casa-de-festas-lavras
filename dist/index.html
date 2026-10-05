@@ -131,6 +131,20 @@
       .instagram-section{display:none}.location-grid{gap:26px}.location .address{font-size:.96rem}.map-card{min-height:230px}footer{padding:42px 0 24px}.footer-top{padding-bottom:28px}.footer-top p{display:none}.footer-links{margin-top:22px;gap:16px;font-size:.8rem}.footer-brand span{font-size:.9rem}.floating-whatsapp{display:none}
     }
   </style>
+  <style>
+    /* Mobile QA fixes: keep the hero quiet and make every visual card readable. */
+    @media (max-width:560px){
+      .hero{min-height:560px}.hero-inner{padding-bottom:42px}.hero-content{max-width:none;padding-top:0}.hero h1{display:none!important}.hero-actions{margin-top:0}.hero-actions .button-primary{min-height:48px}
+      .themes-grid{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:220px;grid-auto-rows:176px;gap:12px}
+      .themes-grid .theme-card,.themes-grid .theme-card:first-child,.themes-grid .theme-card:nth-child(2),.themes-grid .theme-card:nth-child(3),.themes-grid .theme-card:nth-child(n+4){grid-column:auto;grid-row:auto;min-height:0;border-radius:18px 18px 48px 18px}
+      .themes-grid .theme-card:first-child{grid-column:1/-1}
+      .theme-caption{left:12px;right:10px;bottom:12px}.theme-caption small{font-size:.56rem;line-height:1.15;letter-spacing:.1em;margin-bottom:5px}.theme-caption strong{display:block;font-size:1rem;line-height:1.05;letter-spacing:-.03em}
+      .gallery-grid{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}
+      .gallery-grid .gallery-item,.gallery-grid .gallery-item.tall,.gallery-grid .gallery-item.wide{grid-column:auto;grid-row:auto;min-width:0;min-height:0;aspect-ratio:auto}
+      .gallery-grid .gallery-item img{object-fit:cover;object-position:center;width:100%;height:100%}
+      .gallery-item figcaption{left:10px;bottom:9px;font-size:.58rem;letter-spacing:.08em;line-height:1.2;opacity:1}.gallery-item:after{opacity:1;background:linear-gradient(0deg,rgba(23,59,50,.64),transparent 52%)}
+    }
+  </style>
   </head>
 <body>
   <header class="site-header" id="header">
