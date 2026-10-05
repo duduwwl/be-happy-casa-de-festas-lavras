@@ -112,13 +112,32 @@
     @keyframes soft-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}@keyframes float-whatsapp{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
     @media(max-width:840px){.hero-inner{padding-left:22px;padding-right:22px}.hero-content{padding-top:18px}.site-header .brand img{width:58px;height:58px}.site-header.scrolled .brand img{width:52px;height:52px}.nav-social{display:none}.themes-grid{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,250px)}.theme-card:first-child,.theme-card:nth-child(2),.theme-card:nth-child(3),.theme-card:nth-child(n+4){grid-column:auto;grid-row:auto;border-radius:22px 22px 58px 22px}.theme-card:first-child{grid-column:span 2}.signature img{width:min(100%,270px)}.map-card{min-height:300px}}
   </style>
+  <style>
+    /* Responsive refinement: preserve the visual rhythm while prioritizing the action on small screens. */
+    .menu-toggle{width:42px;height:42px;padding:9px;border:1px solid currentColor;border-radius:50%;place-items:center;gap:4px}
+    .menu-toggle span{display:block;width:18px;height:2px;border-radius:2px;background:currentColor}
+    @media (min-width:561px) and (max-width:840px){
+      .wrap{width:min(100% - 44px,700px)}.site-header{padding:14px 0}.site-header .brand img{width:54px;height:54px}.site-header .header-cta{display:none!important}.site-header .menu-toggle{display:grid!important;color:#fff}
+      .site-header.scrolled .menu-toggle{color:var(--ink)}.hero{min-height:700px}.hero-content{transform:translateY(20px)}.hero h1{font-size:clamp(3.5rem,8vw,5rem);max-width:560px}.hero-sub{font-size:1rem;max-width:430px}section{padding:92px 0}.signature img{width:min(100%,240px)}.instagram-section{padding-bottom:92px}
+    }
+    @media (max-width:560px){
+      .wrap{width:calc(100% - 28px)}.site-header{padding:10px 0}.site-header.scrolled{padding:7px 0}.site-header .brand img{width:48px;height:48px}.site-header .header-cta{display:none!important}.site-header .menu-toggle{display:grid!important;color:#fff}.site-header.scrolled .menu-toggle{color:var(--ink)}
+      .nav-links{z-index:21;gap:14px}.nav-links a{font-size:.95rem}.nav-social{display:flex!important}
+      .hero{min-height:640px}.hero-media{background-position:62% center}.hero-inner{padding-bottom:34px}.hero-content{max-width:330px;padding-top:14px;transform:none}.hero h1{font-size:clamp(2.55rem,12.5vw,3.35rem);line-height:.95;max-width:310px;margin:10px 0 14px}.hero-sub{display:none}.hero-actions{display:block}.hero-actions .button-primary{width:100%;padding:13px 16px}.hero-actions .button-ghost{display:none}.mobile-cta{display:none!important}
+      section{padding:64px 0}.intro-grid{gap:26px}.intro-copy{padding:0}.intro h2{font-size:clamp(2.35rem,11vw,3.1rem);margin:12px 0 0}.signature{display:none}.editorial-image img{height:300px;border-radius:68px 14px 14px 14px}
+      .section-head{margin-bottom:24px}.section-head h2{font-size:clamp(2.45rem,11vw,3.25rem)}.themes-grid{grid-template-rows:220px 170px 170px;gap:10px}.theme-caption{left:14px;bottom:14px}.theme-caption small{font-size:.6rem}.theme-caption strong{font-size:1.1rem}
+      .gallery-section{padding-top:64px}.gallery-tabs{margin:18px 0 22px}.gallery-grid{grid-auto-rows:135px;gap:8px}
+      .quote-layout{gap:0}.quote-layout>.reveal{display:none}.quote-form{padding:18px;border-radius:16px}.quote-form>p,.quote-form .form-note,.quote-form .field:nth-child(4),.quote-form .field.full{display:none}.quote-form h3{font-size:1.4rem}.form-grid{gap:10px}.field input{padding:12px}
+      .instagram-section{display:none}.location-grid{gap:26px}.location .address{font-size:.96rem}.map-card{min-height:230px}footer{padding:42px 0 24px}.footer-top{padding-bottom:28px}.footer-top p{display:none}.footer-links{margin-top:22px;gap:16px;font-size:.8rem}.footer-brand span{font-size:.9rem}.floating-whatsapp{display:none}
+    }
+  </style>
   </head>
 <body>
   <header class="site-header" id="header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Be Happy Casa de Festas - início"><img src="assets/logo.png" alt="Logo Be Happy"><span>BE HAPPY<br>CASA DE FESTAS</span></a>
       <nav class="nav-links" aria-label="Navegação principal"><a href="#espaco">O espaço</a><a href="#temas">Temas</a><a href="#galeria">Galeria</a><a class="nav-social nav-instagram" href="https://www.instagram.com/behappy_casadefestas/" target="_blank" rel="noreferrer" aria-label="Instagram da Be Happy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.7" r="1"></circle></svg></a><a class="nav-social nav-whatsapp" href="https://wa.me/5535998877633" target="_blank" rel="noreferrer" aria-label="WhatsApp da Be Happy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.05 0C5.48 0 .14 5.34.14 11.91c0 2.1.55 4.15 1.6 5.96L.04 24l6.27-1.64a11.9 11.9 0 0 0 5.74 1.46h.01c6.56 0 11.9-5.34 11.9-11.91 0-3.18-1.24-6.16-3.46-8.41Zm-8.45 18.3h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.72.97.99-3.63-.23-.37a9.87 9.87 0 0 1-1.51-5.27C2.18 6.46 6.6 2.04 12.06 2.04c2.65 0 5.14 1.04 7.01 2.92a9.86 9.86 0 0 1 2.9 7.02c0 5.45-4.43 9.87-9.92 9.87Zm5.42-7.39c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.08 4.5.71.31 1.27.49 1.7.63.71.23 1.36.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"></path></svg></a></nav>
-      <a class="header-cta" href="#orcamento">Consultar minha data</a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <a class="header-cta" href="#orcamento">Consultar minha data</a><button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
   <main id="top">
